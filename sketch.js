@@ -10,7 +10,7 @@ document.addEventListener('keyup', e => {
 const width = () => window.innerWidth;
 const height = () => window.innerHeight - 5;
 
-let moduloNumber = 0;
+let moduloNumber = 1;
 let totalNumber = 200;
 let stepSize = 0.001;
 
