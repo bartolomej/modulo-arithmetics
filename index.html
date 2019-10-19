@@ -3,18 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Numbers modulo arithmetic</title>
-    <!--link rel="stylesheet" href="style.css"-->
     <style>
         * {
             margin: 0;
             padding: 0;
+            font-family: Monaco, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 25px;
+        }
+        h3 {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 15px;
+        }
+        li {
+            list-style-type: none;
+        }
+        #examples {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-align: end;
+        }
+        #examples button {
+            cursor: pointer;
+            outline: none;
+            border: none;
+            color: #a08afa;
+        }
+        #examples button:hover {
+            color: #ff605a;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
+<div id="modal">
+    <h1>Geometric art.</h1>
+    <p>
+        Press <b>UP KEY</b> to increase speed.
+        <br>
+        Press <b>DOWN KEY</b> to decrease speed.
+    </p>
+    <p>
+        Check example
+    </p>
+</div>
+
 <div id="simulationCanvas"></div>
+<div id="examples">
+    <h3>Jump to interesting examples:</h3>
+    <ul>
+        <li>
+            <button onclick="setModuloNumber(14.61, 0.0001)">-> MODULO 14.61</button>
+        </li>
+        <li>
+            <button onclick="setModuloNumber(50.985, 0.00001)">-> MODULO 51.985</button>
+        </li>
+        <li>
+            <button onclick="setModuloNumber(99.5, 0.00001)">-> MODULO 99.5</button>
+        </li>
+        <li>
+            <button onclick="setModuloNumber(100.49, 0.00001)">-> MODULO 100.49</button>
+        </li>
+        <li>
+            <button onclick="setModuloNumber(579.809, 0.000001)">-> MODULO 579.805</button>
+        </li>
+    </ul>
+</div>
 
-
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script>
+  $("#modal").modal({
+    fadeDuration: 500,
+    fadeDelay: 0.50
+  });
+</script>
 <script src="./tinycolor.js"></script>
 <script src="./p5.min.js"></script>
 <script src="./sketch.js"></script>

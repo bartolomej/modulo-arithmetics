@@ -14,6 +14,11 @@ let moduloNumber = 1;
 let totalNumber = 200;
 let stepSize = 0.001;
 
+function setModuloNumber(number, step) {
+  moduloNumber = number;
+  stepSize = step ? step : stepSize;
+}
+
 const simulation = s => {
   let canvas;
 
