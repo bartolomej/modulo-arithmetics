@@ -56,7 +56,9 @@
 
 <div id="simulationCanvas"></div>
 <div id="examples">
-    <h3>Jump to interesting examples:</h3>
+    <label for="input">Input some number: </label><input id="input" type="text" />
+    <button id="okButton">OK</button>
+    <h3>...or jump to interesting examples:</h3>
     <ul>
         <li>
             <button onclick="setModuloNumber(14.61, 0.0001)">-> MODULO 14.61</button>
@@ -69,6 +71,12 @@
         </li>
         <li>
             <button onclick="setModuloNumber(100.49, 0.00001)">-> MODULO 100.49</button>
+        </li>
+        <li>
+            <button onclick="setModuloNumber(102.473, 0.00001)">-> MODULO 102.473</button>
+        </li>
+        <li>
+            <button onclick="setModuloNumber(103.4, 0.00001)">-> MODULO 103.4</button>
         </li>
         <li>
             <button onclick="setModuloNumber(579.809, 0.000001)">-> MODULO 579.805</button>
@@ -86,7 +94,7 @@
     fadeDelay: 0.50
   });
 </script>
-<script src="./tinycolor.js"></script>
+<script src="color.js"></script>
 <script src="./p5.min.js"></script>
 <script src="./sketch.js"></script>
 </body>

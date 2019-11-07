@@ -1,10 +1,23 @@
-document.addEventListener('keyup', e => {
+document.addEventListener('keyup', function (e) {
   if (e.code === 'ArrowUp') {
     stepSize *= 2;
   }
   if (e.code === 'ArrowDown') {
     stepSize /= 2;
   }
+});
+
+let inputBuffer = 0;
+document.getElementById('input').addEventListener('input', function () {
+  try {
+    inputBuffer = Number.parseFloat(this.value);
+  } catch (e) {
+    console.log('Please input a number!');
+  }
+});
+
+document.getElementById('okButton').addEventListener('click', function () {
+  moduloNumber = inputBuffer;
 });
 
 const width = () => window.innerWidth;
